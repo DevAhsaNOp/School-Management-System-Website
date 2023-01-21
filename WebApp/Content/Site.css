@@ -1,0 +1,96 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+    font-family: Montserrat !important;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+.navbar-inverse .navbar-toggle:hover,
+.navbar-inverse .navbar-toggle:focus {
+    background-color: #777;
+    border-color: #fff
+}
+
+table {
+    border-collapse: separate;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    border-spacing: 0;
+    border-radius: 8px;
+    border: 0px solid #000;
+}
+
+.table > thead > tr > th, .table > tbody > tr > th, .table > tfoot > tr > th, .table > thead > tr > td, .table > tbody > tr > td, .table > tfoot > tr > td {
+    padding: 8px;
+    line-height: 1.42857143;
+    vertical-align: top;
+    border-top: 1px solid aliceblue;
+}
+
+.TableHeader {
+    font-size: 17px;
+    background: darkturquoise;
+    color: black;
+}
+
+tr td {
+    font-weight: 500 !important;
+}
+
+p {
+    margin: 0 0 6px !important;
+}
+
+.HeadingStyle {
+    background: darkturquoise;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: rgb(99 99 99 / 20%) 0px 2px 8px 0px;
+    font-weight: 800;
+}
+
+.DivStyle {
+    border-radius: 8px;
+    box-shadow: rgb(99 99 99 / 20%) 0px 2px 8px 0px;
+    margin: 20px 0;
+}
+
+.DataName {
+    color: #708889;
+    font-size: 18px;
+    font-weight: 500 !important;
+}
+
+.DataValue {
+    color: #000;
+    font-weight: 700;
+    font-size: 16px;
+}
+
+body {
+    font-family: Montserrat !important;
+}
+
+.HeadingInfo {
+    font-weight: 800;
+    font-size: 24px;
+    padding: 0.7rem 1.3rem
+}

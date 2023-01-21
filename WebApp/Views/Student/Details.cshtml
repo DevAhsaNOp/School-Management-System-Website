@@ -1,0 +1,155 @@
+﻿@model BOL.Validation_Classes.ValidateStudent
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2 class="HeadingStyle">Details of Student @Html.DisplayFor(model => model.std_Fname) @Html.DisplayFor(model => model.std_Lname)</h2>
+
+<div class="DivStyle">
+    <div class="container">
+        <div class="row HeadingInfo">
+            <p>Personal Information:</p>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 col-md-3 col-xs-6 col-sm-3">
+                <p class="DataName">
+                    Student ID:
+                </p>
+                <p class="DataValue">
+                    021-334832-@Html.DisplayFor(model => model.std_id)
+                </p>
+            </div>
+            <div class="col-lg-3 col-md-3 col-xs-6 col-sm-3">
+                <p class="DataName">
+                    First Name:
+                </p>
+                <p class="DataValue">
+                    @Html.DisplayFor(model => model.std_Fname)
+                </p>
+            </div>
+            <div class="col-lg-3 col-md-3 col-xs-6 col-sm-3">
+                <p class="DataName">
+                    Last Name:
+                </p>
+                <p class="DataValue">
+                    @Html.DisplayFor(model => model.std_Lname)
+                </p>
+            </div>
+            <div class="col-lg-3 col-md-3 col-xs-6 col-sm-3">
+                <p class="DataName">
+                    Father Name:
+                </p>
+                <p class="DataValue">
+                    @Html.DisplayFor(model => model.std_Fathername)
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-3 col-md-3 col-xs-6 col-sm-3">
+                <p class="DataName">
+                    Mother Name:
+                </p>
+                <p class="DataValue">
+                    @Html.DisplayFor(model => model.std_Mothername)
+                </p>
+            </div>
+            <div class="col-lg-3 col-md-3 col-xs-6 col-sm-3">
+                <p class="DataName">
+                    Gender:
+                </p>
+                <p class="DataValue">
+                    @Html.DisplayFor(model => model.std_gender)
+                </p>
+            </div>
+            <div class="col-lg-3 col-md-3 col-xs-6 col-sm-3">
+                <p class="DataName">
+                    Phone Number:
+                </p>
+                <p class="DataValue">
+                    @Html.DisplayFor(model => model.std_phone)
+                </p>
+            </div>
+            <div class="col-lg-3 col-md-3 col-xs-6 col-sm-3">
+                <p class="DataName">
+                    Address:
+                </p>
+                <p class="DataValue">
+                    @Html.DisplayFor(model => model.std_address)
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-3 col-md-3 col-xs-6 col-sm-3">
+                <p class="DataName">
+                    Email Address:
+                </p>
+                <p class="DataValue">
+                    @Html.DisplayFor(model => model.std_email)
+                </p>
+            </div>
+            <div class="col-lg-3 col-md-3 col-xs-6 col-sm-3">
+                <p class="DataName">
+                    Nationality:
+                </p>
+                <p class="DataValue">
+                    @Html.DisplayFor(model => model.std_nationality)
+                </p>
+            </div>
+            <div class="col-lg-3 col-md-3 col-xs-6 col-sm-3">
+                <p class="DataName">
+                    Date of birth:
+                </p>
+                <p class="DataValue">
+                    @Model.std_dob.ToString("dd-MMMM-yyyy")
+                </p>
+            </div>
+            <div class="col-lg-3 col-md-3 col-xs-6 col-sm-3">
+                <p class="DataName">
+                    Date of Admission:
+                </p>
+                <p class="DataValue">
+                    @Model.std_doa.ToString("dd-MMMM-yyyy")
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-3 col-md-3 col-xs-6 col-sm-3">
+                <p class="DataName">
+                    Age:
+                </p>
+                <p class="DataValue">
+                    @Html.DisplayFor(model => model.std_age)
+                </p>
+            </div>
+            <div class="col-lg-3 col-md-3 col-xs-6 col-sm-3">
+                <p class="DataName">
+                    Religion:
+                </p>
+                <p class="DataValue">
+                    @Html.DisplayFor(model => model.std_religion)
+                </p>
+            </div>
+            <div class="col-lg-3 col-md-3 col-xs-6 col-sm-3">
+                <p class="DataName">
+                    Class:
+                </p>
+                <p class="DataValue">
+                    @Html.DisplayFor(model => model.@class.name) @Html.DisplayFor(model => model.@class.section)
+                </p>
+            </div>
+            <div class="col-lg-3 col-md-3 col-xs-6 col-sm-3">
+                <p class="DataName">
+                </p>
+                <p class="DataValue">
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+<p>
+    @Html.ActionLink("Edit Student", "Edit", new { id = Model.std_id }, new { @class = "btn btn-primary" })
+    @Html.ActionLink("Back to List of Students", "Index", null, new { @class = "btn btn-info" })
+</p>

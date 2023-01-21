@@ -1,0 +1,130 @@
+﻿@model IEnumerable<BOL.Validation_Classes.ValidateStudent>
+
+@{
+    ViewBag.Title = "List of Students";
+}
+
+<h2>List of Students</h2>
+
+<div class="row">
+    <div class="col-md-12 col-sm-12 col-lg-12">
+        @if (TempData["SuccessMsg"] != null)
+        {
+            <div class="alert alert-info alert-dismissable">
+                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+                <i class="icon-info-with-circle"></i><span>@Html.Raw(TempData["SuccessMsg"])</span>
+            </div>
+        }
+        @if (TempData["ErrorMsg"] != null)
+        {
+            <div class="alert alert-danger alert-dismissable">
+                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+                <i class="icon-blocked"></i><span>@Html.Raw(TempData["ErrorMsg"])</span>
+            </div>
+        }
+    </div>
+</div>
+
+<p>
+    @Html.ActionLink("Add New Student", "Create", null, new { @class = "btn btn-success" })
+</p>
+<div style="margin: 15px 0px;">
+    @using (Html.BeginForm("Index", "Student", FormMethod.Post))
+    {
+        <table style="box-shadow: none !important;">
+            <tr>
+                <td>
+                    <span><b style="font-size:16px !important">Search By:</b></span>
+                </td>
+            </tr>
+            <tr style="margin-bottom: 10px">
+                <td>
+                    @Html.RadioButton("searchBy", "std_Name", true, new { style = "margin-bottom: 15px;" })
+                    <text style="margin-bottom: 15px;">Student First Name</text> &nbsp;&nbsp;
+                    @Html.RadioButton("searchBy", "std_phone")
+                    <text>Phone Number</text>&nbsp;&nbsp;
+                    @Html.RadioButton("searchBy", "classname")
+                    <text>Class Name</text>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div style="min-width: 100% !important; display: flex !important; ">
+                        @Html.TextBox("searchValue", null, new
+                   {
+                       Class = "form-control",
+                       Required = "Required",
+                       placeholder = "Enter Student Name or Phone Number or Class",
+                       style = "min-width: 400px !important; margin-right: 20px !important; "
+                   })
+                        <input type="submit" value="Search" class="btn btn-warning" />
+                        @if (TempData["resetF"] != null)
+                        {
+                            @Html.ActionLink("Reset Search", "Index", null, new { @class = "btn btn-primary", style = "margin-left: 5px;" })
+                        }
+                    </div>
+                </td>
+            </tr>
+        </table>
+    }
+</div>
+<table class="table">
+    <tr class="TableHeader">
+        <th style="border-top-left-radius: 8px;">
+            @Html.DisplayNameFor(model => model.std_Fname)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.std_Lname)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.std_Fathername)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.std_Mothername)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.std_email)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.std_phone)
+        </th>
+        <th>
+            Class
+        </th>
+        <th style="border-top-right-radius: 8px;">
+            Actions
+        </th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.std_Fname)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.std_Lname)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.std_Fathername)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.std_Mothername)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.std_email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.std_phone)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.@class.name) @Html.DisplayFor(modelItem => item.@class.section)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.std_id }, new { @class = "btn btn-primary btn-sm" })
+                @Html.ActionLink("Details", "Details", new { id = item.std_id }, new { @class = "btn btn-info btn-sm" })
+            </td>
+        </tr>
+    }
+
+</table>

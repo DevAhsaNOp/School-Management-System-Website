@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="fccc5aac449c49c98cb537953bbe0178" Name="Diagram1">
+        <EntityTypeShape EntityType="studentmanagementsystem_Model.class" Width="1.5" PointX="0.75" PointY="8.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="studentmanagementsystem_Model.class_routine" Width="1.5" PointX="3" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="studentmanagementsystem_Model.employee" Width="1.5" PointX="5.75" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="studentmanagementsystem_Model.fee" Width="1.5" PointX="5.25" PointY="18.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="studentmanagementsystem_Model.receptionist" Width="1.5" PointX="8" PointY="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="studentmanagementsystem_Model.result" Width="1.5" PointX="5.25" PointY="11.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="studentmanagementsystem_Model.student" Width="1.5" PointX="3" PointY="17.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="studentmanagementsystem_Model.sysdiagram" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="studentmanagementsystem_Model.tbl_account" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="studentmanagementsystem_Model.teacher" Width="1.5" PointX="5.75" PointY="4.75" IsExpanded="true" />
+        <AssociationConnector Association="studentmanagementsystem_Model.FK__class_rou__class__0A9D95DB" ManuallyRouted="false" />
+        <AssociationConnector Association="studentmanagementsystem_Model.FK__result__RES_clas__17036CC0" ManuallyRouted="false" />
+        <AssociationConnector Association="studentmanagementsystem_Model.FK__student__std_cla__04E4BC85" ManuallyRouted="false" />
+        <AssociationConnector Association="studentmanagementsystem_Model.FK__reception__rep_e__32AB8735" ManuallyRouted="false" />
+        <AssociationConnector Association="studentmanagementsystem_Model.FK__fees__fees_std_i__1AD3FDA4" ManuallyRouted="false" />
+        <AssociationConnector Association="studentmanagementsystem_Model.FK__result__RES_std___17F790F9" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
